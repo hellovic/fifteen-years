@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Letter Hand";
+  src: url("letter-hand.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  background: #ece9e2;
+  color: #30363f;
+  font-family: "Letter Hand", "Kaiti TC", "BiauKai", "KaiTi", "Songti TC", serif;
+  writing-mode: horizontal-tb;
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body { margin: 0; }
+
+.page {
+  --gutter: clamp(1.35rem, 6vw, 4rem);
+  position: relative;
+  max-width: 46rem;
+  margin-inline: auto;
+  padding-top: calc(clamp(2.8rem, 8vw, 7rem) + env(safe-area-inset-top));
+  padding-right: max(var(--gutter), env(safe-area-inset-right));
+  padding-bottom: calc(2.5rem + env(safe-area-inset-bottom));
+  padding-left: max(var(--gutter), env(safe-area-inset-left));
+}
+
+.page::before, .page::after {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.4rem;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 36% 52%, #343f4c65 0 7%, transparent 16%),
+    radial-gradient(ellipse at 44% 46%, #343f4c40 0 9%, transparent 18%),
+    radial-gradient(ellipse at 66% 22%, #343f4c54 0 4%, transparent 9%),
+    radial-gradient(ellipse at 82% 46%, #343f4c36 0 2%, transparent 7%),
+    radial-gradient(ellipse at 22% 76%, #343f4c41 0 4%, transparent 9%);
+}
+
+.page::before {
+  top: calc(1rem + env(safe-area-inset-top));
+  right: max(1rem, env(safe-area-inset-right));
+  transform: rotate(-19deg);
+}
+
+.page::after {
+  right: max(.5rem, env(safe-area-inset-right));
+  bottom: calc(5.75rem + env(safe-area-inset-bottom));
+  transform: scale(.8) rotate(163deg);
+}
+
+.letter-header {
+  padding-bottom: clamp(2rem, 6vw, 3.25rem);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 6.3vw, 2.85rem);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: .02em;
+}
+
+.signature {
+  margin: 1.65rem 0 0;
+  color: #425e65;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.4;
+  text-align: end;
+}
+
+.letter-body {
+  font-size: clamp(1.3125rem, 2vw, 1.5rem);
+  line-height: 1.9;
+  letter-spacing: .025em;
+  overflow-wrap: break-word;
+}
+
+.letter-body p {
+  margin: 0 0 1em;
+  text-indent: 1em;
+}
+.letter-body p:last-child { margin-bottom: 0; }
+
+footer {
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  border-top: 1px solid #b9c1bf;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #425e65;
+  font-size: .84rem;
+  text-underline-offset: .28em;
+}
+
+footer a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
