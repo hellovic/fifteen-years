@@ -6,11 +6,19 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Readable Hand";
+  src: url("readable-hand.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
-  background: #ece9e2;
-  color: #30363f;
-  font-family: "Letter Hand", "Kaiti TC", "BiauKai", "KaiTi", "Songti TC", serif;
+  background: #f6f2e9;
+  color: #242b33;
+  font-family: "Readable Hand", "Kaiti TC", "BiauKai", "KaiTi", "Songti TC", serif;
   writing-mode: horizontal-tb;
   -webkit-text-size-adjust: 100%;
 }
@@ -62,6 +70,7 @@ body { margin: 0; }
 
 h1 {
   margin: 0;
+  font-family: "Letter Hand", "Readable Hand", "Kaiti TC", serif;
   font-size: clamp(1.8rem, 6.3vw, 2.85rem);
   font-weight: 400;
   line-height: 1.4;
@@ -71,6 +80,7 @@ h1 {
 .signature {
   margin: 1.65rem 0 0;
   color: #425e65;
+  font-family: "Letter Hand", Georgia, serif;
   font-size: 1.4rem;
   font-style: italic;
   line-height: 1.4;
@@ -78,9 +88,9 @@ h1 {
 }
 
 .letter-body {
-  font-size: clamp(1.3125rem, 2vw, 1.5rem);
-  line-height: 1.9;
-  letter-spacing: .025em;
+  font-size: clamp(1.375rem, 2vw, 1.5rem);
+  line-height: 1.85;
+  letter-spacing: .03em;
   overflow-wrap: break-word;
 }
 
